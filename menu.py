@@ -4,6 +4,7 @@ from PPlay.gameimage import *
 from jogo import *
 from mapa import *
 
+#
 
 class Menu:
     def __init__(self, janela, fundo):
