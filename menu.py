@@ -19,7 +19,7 @@ class Menu:
         self.fundo = GameImage("assets/fundo_menu.png")
         self.button = Sprite("assets/Start_button1.png")
         self.button_start = Sprite("assets/Start_button1.png")
-        self.button_exit = Sprite("assets/invaders_assets/sair_button_1.jpg")
+        self.button_exit = Sprite("assets/Exit_button1.png")
         self.cursor = Sprite("assets/dwarven_gauntlet.png")
 
         # assets position
@@ -54,6 +54,14 @@ class Menu:
                 # self.mapa.carrega_mapa()
                 self.game.game_loop()
 
+            self.button_exit = Sprite("assets/Exit_button1.png")
+            self.button_exit.x = self.button_start.x
+            self.button_exit.y = self.button_start.y + self.button.height + 25
+
+            if self.mouse.is_over_object(self.button_exit):
+                self.button_exit = Sprite("assets/Exit_button2.png")
+                self.button_exit.x = self.button_start.x
+                self.button_exit.y = self.button_start.y + self.button.height + 25
 
 
             self.fundo.draw()
